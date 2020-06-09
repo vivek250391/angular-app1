@@ -28,5 +28,11 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/angular-app1.zip'
 
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'drop'
+    publishLocation: 'pipeline'
+
 
 
