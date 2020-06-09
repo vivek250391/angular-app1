@@ -26,5 +26,12 @@ steps:
     rootFolderOrFile: 'dist/angular-app1'
     includeRootFolder: true
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
+    archiveFile: '$(Build.ArtifactStagingDirectory)/angular-app1.zip'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'angular-app1.zip'
+    publishLocation: 'Container'
+
+
