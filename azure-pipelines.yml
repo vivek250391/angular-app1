@@ -24,7 +24,7 @@ steps:
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: 'dist/angular-app1'
-    includeRootFolder: true
+    includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/angular-app1.zip'
 
